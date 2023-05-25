@@ -35,7 +35,6 @@ class AccessControl extends Middleware
                 $pass = Session::get('pass');
                 
                 if(!Hash::check($pass, $User1->password)) {
-                    echo $pass; die(); 
                     Session::put('message','The account you are logged into was logged out.');
                     return redirect('/login');
                 }
